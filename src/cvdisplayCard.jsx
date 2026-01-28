@@ -11,14 +11,14 @@ function CvDisplayCard()
                 </div>
 
                 <div className={"profile_name_container"}>
-                   <p style={{fontSize:21 , fontWeight:"bold"}}>Raj Patel</p>
-                   <p style={{fontSize:12}}>Web Developer</p>
+                   <p style={{fontSize:21 , fontWeight:"bold"}} id={"name"}>Raj Patel</p>
+                   <p style={{fontSize:12}} id={"position"}>Web Developer</p>
                 </div>
             </div>
 
             <div className={"cv_category_container"}>
-                <div className={"cv_category"}>
-                    <div className={"header_container"}>
+                <div className={"cv_contact_category"}>
+                    <div className={"header_contact_container"}>
                        <p style={{marginLeft:10 , fontSize:14}}>Contact</p>
                     </div>
 
@@ -57,39 +57,54 @@ function CvDisplayCard()
                     </div>
 
                     <div className={"experience_title_container"}>
-
+                       <p style={{fontWeight:"bold"}}>Front End Developer</p>
+                       <p>ABC Company | 2020 - Present</p>
                     </div>
 
                     <div className={"experience_text_container"}>
-
+                        <ul>
+                         <li>Developed responsive web applications</li>
+                         <li>Collaborated with design team</li>
+                         <li>Implemented new features</li>
+                        </ul>
                     </div>
                 </div>
 
                 <div className={"cv_category"}>
                     <div className={"header_container"}>
-
+                        <p style={{marginLeft:10 , fontSize:14}}>Education</p>
                     </div>
 
                     <div className={"education_title_container"}>
-
+                        <p style={{fontWeight:"bold"}}>B-Tech in CSE</p>
+                        <p>State University | 2016 - 2020</p>
                     </div>
 
                     <div className={"education_text_container"}>
-
+                        <ul>
+                            <li>Developed responsive web applications</li>
+                            <li>Collaborated with design team</li>
+                            <li>Implemented new features</li>
+                        </ul>
                     </div>
                 </div>
 
                 <div className={"cv_category"}>
                     <div className={"header_container"}>
-
+                        <p style={{marginLeft:10 , fontSize:14}}>Skills</p>
                     </div>
 
                     <div className={"skills_title_container"}>
-
+                        <p style={{fontWeight:"bold"}}>Problem Solving</p>
+                        <p>Competitive Programming</p>
                     </div>
 
                     <div className={"skills_text_container"}>
-
+                        <ul>
+                            <li>Participated in multiple hackathons</li>
+                            <li>Solved more than 500 problems on leetcode</li>
+                            <li>Made more than 10 projects</li>
+                        </ul>
                     </div>
                 </div>
             </div>

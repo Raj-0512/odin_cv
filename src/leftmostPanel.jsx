@@ -6,7 +6,7 @@ function LeftMostPanel()
     return(
         <>
 
-                <div className={"category"}>
+                <div className={"category"} style={{background: "linear-gradient(50deg, #1c2894, #6A7CFF)", color:"white"}}>
                     Personal Info
                 </div>
 
