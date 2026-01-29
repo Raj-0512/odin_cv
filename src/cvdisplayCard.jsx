@@ -11,7 +11,7 @@ function CvDisplayCard()
                 </div>
 
                 <div className={"profile_name_container"}>
-                   <p style={{fontSize:21 , fontWeight:"bold"}} id={"name"}>Raj Patel</p>
+                   <p style={{fontSize:21 , fontWeight:"bold"}} id={"cv_name"}>Raj Patel</p>
                    <p style={{fontSize:12}} id={"position"}>Web Developer</p>
                 </div>
             </div>

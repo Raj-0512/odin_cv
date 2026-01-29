@@ -1,8 +1,10 @@
 export default LeftMostPanel;
 
 
-function LeftMostPanel()
+function LeftMostPanel({currentStep , setCurrentStep})
 {
+
+
     return(
         <>
 
@@ -10,15 +12,15 @@ function LeftMostPanel()
                     Personal Info
                 </div>
 
-                <div className={"category"}>
+                <div className={"category"} >
                     Experience
                 </div>
 
-                <div className={"category"}>
+                <div className={"category"} >
                     Education
                 </div>
 
-                <div className={"category"}>
+                <div className={"category"} >
                     Skills & Summary
                 </div>
 
