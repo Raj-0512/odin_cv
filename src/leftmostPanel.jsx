@@ -1,29 +1,26 @@
-export default LeftMostPanel;
-
-
-function LeftMostPanel({currentStep , setCurrentStep})
+function LeftMostPanel({ currentStep, setCurrentStep })
 {
+    const steps = [
+        "Personal Info",
+        "Experience",
+        "Education",
+        "Skills & Summary"
+    ];
 
+    function getCategoryClass(step)
+    {
+        return step === currentStep ? "category active" : "category";
+    }
 
-    return(
+    return (
         <>
-
-                <div className={"category"} style={{background: "linear-gradient(50deg, #1c2894, #6A7CFF)", color:"white"}}>
-                    Personal Info
+            {steps.map(step => (
+                <div key={step} className={getCategoryClass(step)}>
+                    {step}
                 </div>
-
-                <div className={"category"} >
-                    Experience
-                </div>
-
-                <div className={"category"} >
-                    Education
-                </div>
-
-                <div className={"category"} >
-                    Skills & Summary
-                </div>
-
+            ))}
         </>
-    )
+    );
 }
+
+export default LeftMostPanel;

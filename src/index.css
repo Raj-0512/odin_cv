@@ -49,6 +49,11 @@ body{
     box-shadow: 0 5px 15px rgba(90, 100, 180, 0.3);
 }
 
+.category.active {
+    background: linear-gradient(50deg, #1c2894, #6A7CFF);
+    color: white;
+}
+
 .data_entry_container{
     min-width: 90%;
     min-height: 100vh;
@@ -107,7 +112,7 @@ body{
 }
 
 .next_container{
-    width: 55%;
+    width: 60%;
     height: 35px;
     background: linear-gradient(50deg, #1c2894, #6A7CFF);
     display: flex;
@@ -118,6 +123,7 @@ body{
     margin-left: 20px;
     font-weight: bold;
     border-radius: 5px;
+    cursor: pointer;
 }
 
 .cv_container{
@@ -363,6 +369,56 @@ body{
 .skills_text_container ul li{
     margin-bottom: 5px;
 }
+
+.skills_actionbtn_container{
+    width: 80%;
+    height: 40px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-left:6px;
+}
+
+.edit_btn{
+    width: 40%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.edit_btn button{
+    height: 100%;
+    width: 100%;
+    border-radius: 5px;
+    background: linear-gradient(135deg, #000000, #000000);
+    font-size: 16px;
+    color: white;
+    border: none;
+    box-shadow: 0 5px 15px rgba(90, 100, 180, 0.3);
+    cursor: pointer;
+}
+
+.submit_btn button{
+    height: 100%;
+    width: 100%;
+    border-radius: 5px;
+    background: linear-gradient(50deg, #1c2894, #6A7CFF);
+    font-size: 16px;
+    color: white;
+    border: none;
+    box-shadow: 0 5px 15px rgba(90, 100, 180, 0.3);
+    cursor: pointer;
+}
+
+.submit_btn{
+    width: 40%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 
 @media (min-width:1024px) {
     .parent_container{

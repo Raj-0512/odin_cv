@@ -132,6 +132,16 @@ function DataEntryPanel({ currentStep, cvData, setCvData, setCurrentStep })
 
                 </div>
 
+                <div className={"skills_actionbtn_container"}>
+
+                    <div className={"edit_btn"}>
+                        <button onClick={() => {changeCurrentStep("Personal Info")}}>Edit</button>
+                    </div>
+
+                    <div className={"submit_btn"}>
+                        <button>Submit</button>
+                    </div>
+                </div>
 
             </>
         )
