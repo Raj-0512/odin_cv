@@ -1,4 +1,4 @@
-import {useState} from "react";
+import {useEffect, useRef, useState} from "react";
 
 export default Layout;
 import LeftMostPanel from "./leftmostPanel.jsx";
@@ -72,17 +72,40 @@ function Layout()
 
     const [finalCvData, setFinalCvData] = useState(emptyCvData);
 
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("visible");
+                        // Optional: stop observing once visible
+                        observer.unobserve(entry.target);
+                    }
+                });
+            },
+            { threshold: 0.1 } // Trigger when 10% is visible
+        );
+
+        // Target all elements with the 'reveal' class
+        const revealElements = document.querySelectorAll(".reveal");
+        revealElements.forEach((el) => observer.observe(el));
+
+        return () => {
+            revealElements.forEach((el) => observer.unobserve(el));
+        };
+    }, []);
+
 
 
     return(
 
             <div className={"parent_container"}>
 
-                <div className={"left_panel_container"}>
+                <div className={"left_panel_container reveal"}>
                     <LeftMostPanel currentStep={currentStep} setCurrentStep={setCurrentStep}/>
                 </div>
 
-                <div className={"data_entry_container"}>
+                <div className={"data_entry_container reveal"}>
                     <DataEntryPanel currentStep={currentStep}
                                     cvData={cvData}
                                     setCvData={setCvData}
@@ -91,7 +114,7 @@ function Layout()
                                     setFinalCvData={setFinalCvData}/>
                 </div>
 
-                <div className={"cv_container"}>
+                <div className={"cv_container reveal"}>
                     <CvDisplayCard finalCvData={finalCvData} />
                 </div>
             </div>
