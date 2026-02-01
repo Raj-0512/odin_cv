@@ -11,15 +11,66 @@ function Layout()
     const [currentStep , setCurrentStep] = useState("Personal Info");
 
     const [cvData , setCvData] = useState({
-        name:"",
-        email:"",
-        phone_number:"",
-        location:"",
-        experience:[],
-        education:[],
-        skills:[]
+        personal:{
+            name: "",
+            email: "",
+            phone_number: "",
+            location: ""
+        },
+        experience:{
+            position:"",
+            company:"",
+            impact_1:"",
+            impact_2:"",
+            impact_3:""
+        },
+        education:{
+            degree:"",
+            institute:"",
+            result_1:"",
+            result_2:"",
+            result_3:""
+        },
+        skills:{
+            main:"",
+            secondary:"",
+            achievement_1:"",
+            achievement_2:"",
+            achievement_3:""
+        }
     });
 
+    const emptyCvData = {
+        personal: {
+            name: "",
+            email: "",
+            phone_number: "",
+            location: ""
+        },
+        experience: {
+            position: "",
+            company: "",
+            impact_1: "",
+            impact_2: "",
+            impact_3: ""
+        },
+        education: {
+            degree: "",
+            institute: "",
+            result_1: "",
+            result_2: "",
+            result_3: ""
+        },
+        skills: {
+            main: "",
+            secondary: "",
+            achievement_1: "",
+            achievement_2: "",
+            achievement_3: ""
+        }
+    };
+
+    const [finalCvData, setFinalCvData] = useState(emptyCvData);
 
 
 
@@ -35,11 +86,13 @@ function Layout()
                     <DataEntryPanel currentStep={currentStep}
                                     cvData={cvData}
                                     setCvData={setCvData}
-                                    setCurrentStep={setCurrentStep}/>
+                                    setCurrentStep={setCurrentStep}
+                                    finalCvData={finalCvData}
+                                    setFinalCvData={setFinalCvData}/>
                 </div>
 
                 <div className={"cv_container"}>
-                    <CvDisplayCard cvData={cvData} />
+                    <CvDisplayCard finalCvData={finalCvData} />
                 </div>
             </div>
 

@@ -23,7 +23,7 @@ body{
 
 .left_panel_container{
     min-width: 90%;
-    min-height: 100vh;
+    min-height: fit-content;
     background-color: #f9f7f7;
     display: flex;
     justify-content: start;
@@ -56,7 +56,7 @@ body{
 
 .data_entry_container{
     min-width: 90%;
-    min-height: 100vh;
+    min-height: 60vh;
     display: flex;
     justify-content: left;
     align-items: start;
@@ -127,7 +127,7 @@ body{
 }
 
 .cv_container{
-    min-width: 90%;
+    width: 90%;
     height: 100vh;
     background-color: white;
     display: flex;
@@ -173,7 +173,9 @@ body{
 
 .profile_name_container p{
     margin:2px;
-
+    overflow-wrap: break-word;
+    word-break: break-word;
+    white-space: normal;
 }
 
 .cv_category_container{
@@ -455,12 +457,19 @@ body{
         margin-left:5px;
         margin-bottom: 5px;
         max-height: 90vh;
-        min-width: 30%;
+        width: 40%;
     }
 
     .profile_pic_container img{
         height: 100%;
         width: 100%;
+    }
+
+    .profile_name_container p{
+        margin:2px;
+        overflow-wrap: break-word;
+        word-break: break-word;
+        white-space: normal;
     }
 
     #cv_name{
@@ -511,7 +520,6 @@ body{
     }
 
     .profile_pic_container{
-        border: 1px solid black;
         height: 80%;
         width: 20%;
     }
